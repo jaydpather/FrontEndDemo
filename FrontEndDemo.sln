@@ -3,8 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Web
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1AB0702A-F17A-48FF-AC32-5063D44BFA87}"
+	ProjectSection(SolutionItems) = preProject
+		default.css = default.css
+		footer.html = footer.html
+		index.html = index.html
+		leftMenu.html = leftMenu.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{5FE896D2-2956-463B-B164-FB895C4009A9}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\default.js = scripts\default.js
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5FE896D2-2956-463B-B164-FB895C4009A9} = {1AB0702A-F17A-48FF-AC32-5063D44BFA87}
 	EndGlobalSection
 EndGlobal

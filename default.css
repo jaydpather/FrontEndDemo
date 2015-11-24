@@ -14,7 +14,9 @@
     padding-right:25px;
     background-color:#87A88D;
     padding-top:7px;
-    padding-bottom:7px;
+    padding-bottom:10px;
+    width:125px;
+    height:100%;
 }
 
 .menuItem
@@ -29,7 +31,11 @@
 main
 {
     float:left;
+    clear:none;
     margin:10px 0px 0px 10px;
+    width:800px;
+    text-wrap:normal;
+    overflow-wrap:normal;
 }
 
 footer
@@ -40,4 +46,5 @@ footer
     max-width:1024px;
     text-align:center;
     padding:25px 0px 25px 0px;
+    margin-top:-10px;
 }

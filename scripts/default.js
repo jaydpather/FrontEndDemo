@@ -24,8 +24,7 @@ function highlightCurrentMenuItem()
 function initCommonSections()
 {
     var leftMenuHtml = "<a href='index.html' class='menuItem'>Home</a>" +
-                        "<a href='' class='menuItem'>item 2</a>" +
-                        "<a href='' class='menuItem'>item 3</a>";
+                        "<a href='graph.html' class='menuItem'>Dynamic Graph</a>";
 
     $("header").html("Jayd Pather's Front End Demo");
     $("#leftMenu").html(leftMenuHtml);

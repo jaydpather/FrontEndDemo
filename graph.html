@@ -4,8 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="graph.css" />
     <script type="text/javascript" src="scripts/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="scripts/default.js"></script>
+    <script type="text/javascript" src="scripts/graph.js"></script>
     <title></title>
 </head>
 <body>
@@ -14,7 +16,44 @@
     <div id="leftMenu">
     </div>
     <main>
-        This is the graph page.
+        <div>
+            Enter a number:&nbsp;
+            <input id="txtNumber" type="number"/>
+            &nbsp;
+            <input id="btnAddNumber" type="button" value="add" onclick="btnAddNumber_Click()"/>
+        </div>
+        <div id="divNumbersAdded">&nbsp;</div>
+        <!--<div id="divGraphLabels" style="float:left;">
+            <div id="div100">100</div>
+            <div id="div50">50</div>
+            <div id="div25">25</div>
+            <div id="div0">0</div>
+        </div>-->
+        <!--<div id="graphWrapper" style="float:left;position:relative;">
+        </div>-->
+        <div id="divBarGraph">
+            <div id="bar1" class="bar" style="height:25px;"></div>
+            <div id="bar2" class="bar" style="height:45px;"></div>
+            <div id="bar3" class="bar" style="height:15px;"></div>
+            <div id="bar4" class="bar" style="height:85px;"></div>
+            <div id="bar5" class="bar" style="height:65px;"></div>
+            <div id="bar6" class="bar" style="height:3px;"></div>
+            <div id="bar7" class="bar" style="height:70px;"></div>
+            <div id="bar8" class="bar" style="height:34px;"></div>
+            <div id="bar9" class="bar" style="height:67px;"></div>
+        </div>
+        <div id="divBarLabels">
+            <div id="barLabel1" class="barLabel" style="">1</div>
+            <div id="barLabel2" class="barLabel" style="">2</div>
+            <div id="barLabel3" class="barLabel" style="">3</div>
+            <div id="barLabel4" class="barLabel" style="">4</div>
+            <div id="barLabel5" class="barLabel" style="">5</div>
+            <div id="barLabel6" class="barLabel" style="">6</div>
+            <div id="barLabel7" class="barLabel" style="">7</div>
+            <div id="barLabel8" class="barLabel" style="">8</div>
+            <div id="barLabel9" class="barLabel" style="">9</div>
+        </div>
+        
     </main>
     <footer>
     </footer>

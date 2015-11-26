@@ -29,4 +29,7 @@ function initCommonSections()
     $("header").html("Jayd Pather's Front End Demo");
     $("#leftMenu").html(leftMenuHtml);
     $("footer").html("A demo of HTML 5, CSS 3, and JQuery");
+
+    var mainHeight = $("main").css("height");
+    $("#leftMenu").css("height", mainHeight);
 }

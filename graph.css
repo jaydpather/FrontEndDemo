@@ -1,0 +1,21 @@
+#divBarGraph
+{
+    border:solid 1px black;
+    height:100px;
+    width:332px;
+    position:relative; 
+}
+
+.bar
+{
+    background-color:red;
+    position:absolute;
+    bottom:0;
+}
+
+.barLabel 
+{
+    text-align:center;
+    float:left;
+    position:absolute;
+}

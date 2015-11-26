@@ -1,4 +1,9 @@
-﻿header
+﻿body
+{
+    min-width:1024px; 
+}
+
+header
 {
     background-color:#818099;
     font-size:large;
@@ -16,7 +21,6 @@
     padding-top:7px;
     padding-bottom:10px;
     width:125px;
-    height:400px;
 }
 
 .menuItem
@@ -36,6 +40,7 @@ main
     width:800px;
     text-wrap:normal;
     overflow-wrap:normal;
+    min-height:200px;
 }
 
 footer

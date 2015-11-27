@@ -12,7 +12,8 @@ function btnAddNumber_Click() {
     $("#divNumbersAdded").html(fulltext);
 }
 
-function InitGraphBars() {
+function InitGraphBars()
+{
     var numBars = 9;
     var marginLeftEach = 5;
     var width = 31;
@@ -28,7 +29,35 @@ function InitGraphBars() {
     }
 
 }
+
+function InitGraphLabels()
+{
+    SetMarginTop("graphLabel100");
+    
+    var graphHeight = $("#divBarGraph").css("height");
+    graphHeight = StripPxEnding(graphHeight);
+    $("#graphLabel100").css("height", graphHeight / 4);
+    $("#graphLabel75").css("height", graphHeight / 4);
+    $("#graphLabel50").css("height", graphHeight / 4);
+    $("#graphLabel25").css("height", graphHeight / 4);
+}
+
+function SetMarginTop(controlId)
+{
+    var cssSelector = "#" + controlId;
+    var labelHeight = $(cssSelector).css("height");
+    labelHeight = StripPxEnding(labelHeight);
+    var paddingTop = -(labelHeight / 2);
+    $(cssSelector).css("margin-top", paddingTop + "px");
+}
+
+function StripPxEnding(str)
+{
+    return str.substring(0, str.indexOf("p"));
+}
+
 $(document).ready(function ()
 {
     InitGraphBars();
+    InitGraphLabels();
 });;

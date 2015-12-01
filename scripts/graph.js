@@ -1,6 +1,37 @@
+var _minBar = 1;
+var _maxBar = 9;
+var _divisibleCounts = [];
+var _numbersEnteredCount = 0;
+
 function btnAddNumber_Click() {
-    var curHtml = $("#divNumbersAdded").html();
+    _numbersEnteredCount++;
     var curNum = $("#txtNumber").val();
+
+    UpdateNumbersEnteredLabel(curNum);
+    UpdateBars(curNum);
+}
+
+function UpdateBars(curNum)
+{
+    var graphHeight = $("#divBarGraph").css("height");
+    graphHeight = StripPxEnding(graphHeight);
+
+    for(var i=_minBar; i<=_maxBar; i++)
+    {
+        if(curNum % i == 0)
+            _divisibleCounts[i - _minBar]++;
+
+        var pct = _divisibleCounts[i - _minBar] / _numbersEnteredCount;
+        var barHeight = (pct * graphHeight) + "px";    
+        $("#bar" + i).css("height", barHeight);
+        
+    }
+}
+
+function UpdateNumbersEnteredLabel(curNum)
+{
+    var curHtml = $("#divNumbersAdded").html();
+    
 
     var delimiter;
     if (curHtml == "&nbsp;")
@@ -56,8 +87,15 @@ function StripPxEnding(str)
     return str.substring(0, str.indexOf("p"));
 }
 
+function InitData()
+{
+    for (var i = 0; i < (_maxBar - _minBar + 1) ; i++)
+        _divisibleCounts[i] = 0;
+}
+
 $(document).ready(function ()
 {
     InitGraphBars();
     InitGraphLabels();
+    InitData();
 });;

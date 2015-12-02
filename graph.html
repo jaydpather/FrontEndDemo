@@ -19,14 +19,21 @@
         <p style="margin-bottom:20px;">
             Type numbers in the textbox below and click "add" or press enter. The bar graph below will show the percentage of entered numbers that are divisible by 1 - 9. For example, entering 4 will increase the height of the bars for 1, 2, and 4. Entering 11 will decrease the height of all bars except 1.
         </p>
-        <div>
-            Enter a number:&nbsp;
-            <input id="txtNumber" type="number" />
-            &nbsp;
-            <input id="btnAddNumber" type="button" value="add" onclick="btnAddNumber_Click()" />
+        <div style="float:left;">
+            <div style="float:left;">
+                Enter a number:&nbsp;
+            </div>
+            <div style="float:left;">
+                <input id="txtNumber" type="text" style="float:left;" />&nbsp;
+                <div id="divErrNumber" style="float:left; clear:left; color:red; display:none;">
+                    * Must be a whole number
+                </div>
+            </div>
+
+            <input id="btnAddNumber" type="button" value="add" style="float:left;" onclick="btnAddNumber_Click()" />
         </div>
-        <div id="divNumbersAdded" style="margin-bottom:20px;">&nbsp;</div>
-        <div id="divBarGraph">
+        <div id="divNumbersAdded" style="margin-bottom:20px; float:left; clear:left;">&nbsp;</div>
+        <div id="divBarGraph" style="float:left; clear:left;">
             <div id="graphLabel100" style="margin-left:-40px;">100%</div>
             <div id="graphLabel75" style="margin-left:-35px;">75%</div>
             <div id="graphLabel50" style="margin-left:-35px;">50%</div>
@@ -42,7 +49,7 @@
             <div id="bar8" class="bar" style="height:0px;"></div>
             <div id="bar9" class="bar" style="height:0px;"></div>
         </div>
-        <div id="divBarLabels" style="margin-left:50px; margin-bottom:20px;">
+        <div id="divBarLabels" style="margin-left:40px; margin-bottom:20px; float:left; clear:left;">
             <div id="barLabel1" class="barLabel" style="">1</div>
             <div id="barLabel2" class="barLabel" style="">2</div>
             <div id="barLabel3" class="barLabel" style="">3</div>

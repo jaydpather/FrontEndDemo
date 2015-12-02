@@ -4,6 +4,14 @@ var _divisibleCounts = [];
 var _numbersEnteredCount = 0;
 
 function btnAddNumber_Click() {
+    if (!ValidateNumber())
+    {
+        $("#divErrNumber").css("display", "inline");
+        return;
+    }
+
+    $("#divErrNumber").css("display", "none");
+
     _numbersEnteredCount++;
     var curNum = $("#txtNumber").val();
 
@@ -12,6 +20,11 @@ function btnAddNumber_Click() {
 
     var curNum = $("#txtNumber").val("");
     $("#txtNumber").focus();
+}
+
+function ValidateNumber()
+{
+    return !isNaN($("#txtNumber").val());
 }
 
 function UpdateBars(curNum)
@@ -108,4 +121,6 @@ $(document).ready(function ()
         if (event.keyCode == enterKeyCode)
             $("#btnAddNumber").click();
     });
+
+    
 });;

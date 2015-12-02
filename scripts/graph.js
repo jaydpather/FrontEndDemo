@@ -1,5 +1,5 @@
-var _minBar = 1;
-var _maxBar = 9;
+const _minBar = 1;
+const _maxBar = 9;
 var _divisibleCounts = [];
 var _numbersEnteredCount = 0;
 
@@ -35,7 +35,6 @@ function UpdateNumbersEnteredLabel(curNum)
 {
     var curHtml = $("#divNumbersAdded").html();
     
-
     var delimiter;
     if (curHtml == "&nbsp;")
         delimiter = "";
@@ -48,13 +47,12 @@ function UpdateNumbersEnteredLabel(curNum)
 
 function InitGraphBars()
 {
-    var numBars = 9;
-    var marginLeftEach = 5;
-    var width = 31;
+    const marginLeftEach = 5;
+    const width = 31;
 
-    for(var i = 1; i<= numBars; i++)
+    for(var i = _minBar; i<= _maxBar; i++)
     {
-        var marginLeftCur = ((i - 1) * (width + marginLeftEach)) + marginLeftEach;
+        var marginLeftCur = ((i - _minBar) * (width + marginLeftEach)) + marginLeftEach;
         $("#bar" + i).css("margin-left", marginLeftCur);
         $("#bar" + i).css("width", width);
 
@@ -68,12 +66,14 @@ function InitGraphLabels()
 {
     SetMarginTop("graphLabel100");
     
+    const numLabelsNotZero = 4;
+
     var graphHeight = $("#divBarGraph").css("height");
     graphHeight = StripPxEnding(graphHeight);
-    $("#graphLabel100").css("height", graphHeight / 4);
-    $("#graphLabel75").css("height", graphHeight / 4);
-    $("#graphLabel50").css("height", graphHeight / 4);
-    $("#graphLabel25").css("height", graphHeight / 4);
+    $("#graphLabel100").css("height", graphHeight / numLabelsNotZero);
+    $("#graphLabel75").css("height", graphHeight / numLabelsNotZero);
+    $("#graphLabel50").css("height", graphHeight / numLabelsNotZero);
+    $("#graphLabel25").css("height", graphHeight / numLabelsNotZero);
 }
 
 function SetMarginTop(controlId)
@@ -104,7 +104,7 @@ $(document).ready(function ()
 
     $("#txtNumber").keypress(function (event)
     {
-        var enterKeyCode = 13;
+        const enterKeyCode = 13;
         if (event.keyCode == enterKeyCode)
             $("#btnAddNumber").click();
     });

@@ -20,3 +20,8 @@
     float:left;
     position:absolute;
 }
+
+.graphDiv
+{
+    margin-left:10px;
+}

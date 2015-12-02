@@ -35,7 +35,7 @@ function UpdateNumbersEnteredLabel(curNum)
 
     var delimiter;
     if (curHtml == "&nbsp;")
-        delimiter = " ";
+        delimiter = "";
     else
         delimiter = ", ";
 

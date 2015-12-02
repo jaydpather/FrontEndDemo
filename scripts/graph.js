@@ -101,4 +101,11 @@ $(document).ready(function ()
     InitGraphBars();
     InitGraphLabels();
     InitData();
+
+    $("#txtNumber").keypress(function (event)
+    {
+        var enterKeyCode = 13;
+        if (event.keyCode == enterKeyCode)
+            $("#btnAddNumber").click();
+    });
 });;

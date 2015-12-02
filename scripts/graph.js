@@ -9,6 +9,9 @@ function btnAddNumber_Click() {
 
     UpdateNumbersEnteredLabel(curNum);
     UpdateBars(curNum);
+
+    var curNum = $("#txtNumber").val("");
+    $("#txtNumber").focus();
 }
 
 function UpdateBars(curNum)

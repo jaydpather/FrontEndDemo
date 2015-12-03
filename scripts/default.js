@@ -1,11 +1,11 @@
 
 $(document).ready(function ()
 {
-    initCommonSections();
-    highlightCurrentMenuItem();
+    InitCommonSections();
+    HighlightCurrentMenuItem();
 });
 
-function highlightCurrentMenuItem()
+function HighlightCurrentMenuItem()
 {
     $("#leftMenu").find("a").each(function()
     {
@@ -21,7 +21,7 @@ function highlightCurrentMenuItem()
     });
 }
 
-function initCommonSections()
+function InitCommonSections()
 {
     var leftMenuHtml = "<a href='index.html' class='menuItem'>Home</a>" +
                         "<a href='graph.html' class='menuItem'>Dynamic Graph</a>"+

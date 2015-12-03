@@ -24,7 +24,8 @@ function btnAddNumber_Click() {
 
 function ValidateNumber()
 {
-    return !isNaN($("#txtNumber").val());
+    var val = $("#txtNumber").val();
+    return (val == parseInt(val, 10));
 }
 
 function UpdateBars(curNum)
@@ -49,7 +50,7 @@ function UpdateNumbersEnteredLabel(curNum)
     var curHtml = $("#divNumbersAdded").html();
     
     var delimiter;
-    if (curHtml == "&nbsp;")
+    if (curHtml == "")
         delimiter = "";
     else
         delimiter = ", ";

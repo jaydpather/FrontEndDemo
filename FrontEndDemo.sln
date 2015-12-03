@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		graph.css = graph.css
 		graph.html = graph.html
 		index.html = index.html
+		info.html = info.html
 		leftMenu.html = leftMenu.html
 	EndProjectSection
 EndProject
